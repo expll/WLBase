@@ -30,4 +30,9 @@
 + (NSString *)Encode:(NSString *)s;
 + (NSString *)Decode:(NSString *)s;
 
+// 判断是否是新的小时
+// 返回YES的地方一定保存一下
+// 使用了1个小时了 就需要更新缓存
++ (BOOL)isANewHOUR;
+
 @end
