@@ -18,5 +18,14 @@ typedef void (^blockRetObj) (id _Nullable obj);
 
 
 
+/*
+ 
+    git tag '1.0.0'
+    git push --tags
+    pod lib lint
+ 
+ */
+
+
 
 #endif /* WLConstant_h */
