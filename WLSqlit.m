@@ -13,7 +13,7 @@
 @implementation WLSqlit
 
 + (void)saveAObject:(id)obj Class:(Class)class primaryName:(NSString *)primaryName
-                                                primaryKey:(NSString *)primaryKey {
+         primaryKey:(NSString *)primaryKey {
     
     JQFMDB *db = [JQFMDB shareDatabase];
     
@@ -65,6 +65,8 @@
         NSArray *arr = [db jq_lookupTable:NSStringFromClass(class) dicOrModel:class whereFormat:sql];
         if (arr.count > 0) {
             block([arr firstObject]);
+        } else {
+            block(nil);
         }
         
     }];
