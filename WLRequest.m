@@ -7,6 +7,7 @@
 //
 
 #import "WLRequest.h"
+#import "Toast+UIView.h"
 
 @implementation WLRequest
 
@@ -25,6 +26,9 @@
     
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         handler(response, data, error);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[[UIApplication sharedApplication] delegate].window makeToast:@"error" duration:2 position:@"buttom"];
+        });
     }];
     
     // 使用resume方法启动任务
