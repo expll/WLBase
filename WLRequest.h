@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Reachability.h"
+
 #define NETWORK_ERROR 10086110
 
 
