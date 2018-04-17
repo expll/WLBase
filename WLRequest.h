@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
+#define NETWORK_ERROR 10086110
+
 
 @interface WLRequest : NSObject
 
@@ -17,5 +20,7 @@
 + (void)setHttpHeadersWithRequest:(NSMutableURLRequest *_Nullable*_Nullable)request;
 
 + (NSString *_Nullable)decodingGB32:(NSData *_Nullable)data;
+
++ (void)netWorkMonitor;
 
 @end
