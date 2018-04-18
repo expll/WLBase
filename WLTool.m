@@ -203,6 +203,36 @@
     
 }
 
++ (BOOL)isANewSecond {
+    id second = [[NSUserDefaults standardUserDefaults] objectForKey:@"isANewSecond"];
+    if (second == nil) {
+        NSString *s = [DateUtil getNowStrByFormar:@"yyyy-MM-dd HH:mm:ss"];
+        [[NSUserDefaults standardUserDefaults] setObject:s forKey:@"isANewSecond"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        return YES;
+    }
+    NSString *s = [DateUtil getNowStrByFormar:@"yyyy-MM-dd HH:mm:ss"];
+    if ([second isEqualToString:s]) {
+        return NO;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:s forKey:@"isANewSecond"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return YES;
+}
+
+
++ (void)saveNewHOUR {
+    NSString *today = [DateUtil getNowStrByFormar:@"yyyy-MM-dd HH"];
+    [[NSUserDefaults standardUserDefaults] setObject:today forKey:@"isANewHOUR"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (void)saveNewSecond {
+    NSString *s = [DateUtil getNowStrByFormar:@"yyyy-MM-dd HH:mm:ss"];
+    [[NSUserDefaults standardUserDefaults] setObject:s forKey:@"isANewSecond"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 
 

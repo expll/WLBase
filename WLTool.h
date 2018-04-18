@@ -34,5 +34,8 @@
 // 返回YES的地方一定保存一下
 // 使用了1个小时了 就需要更新缓存
 + (BOOL)isANewHOUR;
++ (void)saveNewHOUR;
++ (BOOL)isANewSecond;
++ (void)saveNewSecond;
 
 @end
