@@ -40,9 +40,9 @@ BOOL isReachable = NSNotFound;
         handler(response, data, error);
         
         if (error) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[[UIApplication sharedApplication] delegate].window makeToast:@"error" duration:2 position:@"buttom"];
-            });
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [[[UIApplication sharedApplication] delegate].window makeToast:@"error" duration:2 position:@"buttom"];
+//            });
         }
         
         
