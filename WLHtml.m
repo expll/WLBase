@@ -34,7 +34,7 @@
     for (int i = 0; i < arr.count; i++) {
         NSString *str = arr[i];
         NSMutableDictionary *mulDic = [NSMutableDictionary dictionaryWithCapacity:0];
-        NSArray *keys = @[@"title", @"author", @"des", @"cat", @"lastChapter", @"cover", @"update"];
+        NSArray *keys = @[@"title", @"author", @"des", @"cat", @"lastChapter", @"cover", @"update", @"serial"];
         for (NSString *key in keys) {
             NSString *value = [self getValueBy:key dic:dic content:str];
             [mulDic setObject:value forKey:key];
