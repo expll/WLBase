@@ -236,6 +236,28 @@
 
 
 
++ (void)BlurWithImageView:(UIImageView *)imageview{
+    
+    if ([UIDevice currentDevice].systemVersion.floatValue>=8.0) {
+        /**  毛玻璃特效类型
+         *  UIBlurEffectStyleExtraLight,
+         *  UIBlurEffectStyleLight,
+         *  UIBlurEffectStyleDark
+         */
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        
+        //  毛玻璃视图
+        UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+//        self.effectView = effectView;
+        
+        //添加到要有毛玻璃特效的控件中
+        [imageview addSubview:effectView];
+        
+        effectView.frame = CGRectMake(0, 0, imageview.frame.size.width, imageview.frame.size.height);
+        //设置模糊透明度
+        effectView.alpha = 0.99f;
+    }
+}
 
 
 

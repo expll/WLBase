@@ -38,4 +38,6 @@
 + (BOOL)isANewSecond;
 + (void)saveNewSecond;
 
++ (void)BlurWithImageView:(UIImageView *)imageview;
+
 @end
