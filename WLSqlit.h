@@ -14,6 +14,9 @@
 // 保存一个对象
 + (void)saveAObject:(id)obj Class:(Class)class primaryName:(NSString *)primaryName primaryKey:(NSString *)primaryKey;
 
+// 保存多个对象
++ (void)saveObjects:(id)obj Class:(Class)class;
+
 // 提取一个对象
 + (void)getAObject:(Class )class ret:(blockRetObj)block;
 

@@ -35,6 +35,23 @@
     }];
 }
 
++ (void)saveObjects:(NSArray *)arr Class:(Class)class{
+    JQFMDB *db = [JQFMDB shareDatabase];
+    if (![db jq_isExistTable:NSStringFromClass(class)]) {
+        [db jq_createTable:NSStringFromClass(class) dicOrModel:class];
+    }
+    for (int i = 0; i < arr.count; i++) {
+        [db jq_inTransaction:^(BOOL *rollback) {
+            BOOL flag = [db jq_insertTable:NSStringFromClass(class) dicOrModel:[arr objectAtIndex:i]];
+            if (!flag) {
+                *rollback = NO; //只要有一次不成功,则进行不回滚操作
+                return;
+            }
+        }];
+    }
+    
+}
+
 
 + (void)getAObject:(Class )class ret:(blockRetObj)block {
     JQFMDB *db = [JQFMDB shareDatabase];
@@ -85,6 +102,8 @@
             NSArray* reversedArray = [[arr reverseObjectEnumerator] allObjects];
             block(reversedArray);
             //printf("==3=%s:%f\n", __FUNCTION__, clock()/(float)CLOCKS_PER_SEC);
+        } else {
+            block(nil);
         }
         
     }];
