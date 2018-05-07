@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WLBase"
-  s.version      = "1.0.20"
+  s.version      = "1.0.21"
   s.summary      = "A short description of WLBase."
 
   # This description is used to generate tags and improve search results.
@@ -137,6 +137,6 @@ Pod::Spec.new do |s|
   s.dependency "RegexKitLite"
   s.dependency "WLModel"
     #s.dependency "FMDB"
-  s.dependency "JQFMDB"
+#s.dependency "JQFMDB"
 
 end
