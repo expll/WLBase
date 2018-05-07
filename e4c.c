@@ -28,12 +28,12 @@
  */
 
 
+
 # include <stdio.h>
 # include <signal.h>
 # include <errno.h>
 # include <stdarg.h>
 # include "e4c.h"
-
 
 /*
  * __NO_INLINE__
@@ -3732,6 +3732,7 @@ static void _e4c_print_exception(const e4c_exception * exception){
     if(exception->file != NULL){
         if(exception->function != NULL){
             fprintf(stderr, "    thrown at %s (%s:%d)\n\n", exception->function, exception->file, exception->line);
+//            saveStr();
         }else{
             fprintf(stderr, "    thrown at %s:%d\n\n", exception->file, exception->line);
         }
