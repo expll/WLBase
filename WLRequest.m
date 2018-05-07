@@ -7,7 +7,6 @@
 //
 
 #import "WLRequest.h"
-#import "Toast+UIView.h"
 #import "Reachability.h"
 
 Reachability *hostReach;
