@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@import GoogleMobileAds;
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface WLAdmob : NSObject
 + (void)loadWithAdUnitID:(NSString *)AdUnitID;
