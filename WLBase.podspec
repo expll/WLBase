@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WLBase"
-  s.version      = "2.0.9"
+  s.version      = "2.0.10"
   s.summary      = "A short description of WLBase."
 
   # This description is used to generate tags and improve search results.
@@ -106,7 +106,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-s.resources = "imgs/*.png", "**/*.xib"
+#s.resources = "imgs/*.png", "**/*.xib"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
