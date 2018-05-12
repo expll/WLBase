@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WLBase"
-  s.version      = "2.0.6"
+  s.version      = "2.0.7"
   s.summary      = "A short description of WLBase."
 
   # This description is used to generate tags and improve search results.
@@ -132,10 +132,9 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   # s.requires_arc = true
-
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+s.xcconfig = { "HEADER_SEARCH_PATHS" => '"."/**' }
+#s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/right/3rd/" }
   #s.dependency "Reachability"
-  s.dependency "Google-Mobile-Ads-SDK"
   
 
 
