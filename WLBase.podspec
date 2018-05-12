@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WLBase"
-  s.version      = "2.0.3"
+  s.version      = "2.0.4"
   s.summary      = "A short description of WLBase."
 
   # This description is used to generate tags and improve search results.
@@ -119,6 +119,7 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = "UIKit"
+  s.frameworks = "GoogleMobileAds"
 
   # s.library   = "iconv"
   s.libraries = "sqlite3"
