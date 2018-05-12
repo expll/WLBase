@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WLBase"
-  s.version      = "2.0.8"
+  s.version      = "2.0.9"
   s.summary      = "A short description of WLBase."
 
   # This description is used to generate tags and improve search results.
@@ -92,9 +92,8 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "**/*.{h,m}"
-  #s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "**/*.h"
+  # s.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -106,7 +105,8 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  #s.resources = "imgs/*.png"
+  # s.resources = "Resources/*.png"
+s.resources = "imgs/*.png", "**/*.xib"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -121,7 +121,7 @@ Pod::Spec.new do |s|
   s.frameworks = "UIKit"
 
   # s.library   = "iconv"
-  s.libraries = "sqlite3"
+  # s.libraries = "iconv", "xml2"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -132,9 +132,7 @@ Pod::Spec.new do |s|
 
   # s.requires_arc = true
 
-#s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/right/3rd/" }
-  #s.dependency "Reachability"
-  
-
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  # s.dependency "JSONKit", "~> 1.4"
 
 end
